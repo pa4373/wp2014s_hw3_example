@@ -1,4 +1,4 @@
-// Looking for this? : http://jsbeautifier.org/ 
+// At least you know how to find the master branch, or ask.
 (function () {
   Parse.initialize("s4747jSandiQGpXlbizjGZMgXJAepvnGnbc7NCmu",
     "PihDCqy36lpBPQc8rmiEH477nSD0tT1vrSSjBAm0");
@@ -56,7 +56,7 @@
             var TeamMembers = TAHelp.getMemberlistOf(currentUser.get('username')).filter(function(e){
               return (e.StudentId !== currentUser.get('username') ) ? true : false;
             }).map(function(e){
-              e.scores = ['1', '1', '1', '1'];
+              e.scores = ['0', '0', '0', '0'];
               return e;
             });
           } else {
