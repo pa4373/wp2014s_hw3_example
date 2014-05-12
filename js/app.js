@@ -1,4 +1,4 @@
-// At least you know how to find the master branch, or ask.
+// At least you know how to find the master branch, or ask someone.
 (function () {
   Parse.initialize("s4747jSandiQGpXlbizjGZMgXJAepvnGnbc7NCmu",
     "PihDCqy36lpBPQc8rmiEH477nSD0tT1vrSSjBAm0");
