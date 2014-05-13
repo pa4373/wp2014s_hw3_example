@@ -76,75 +76,108 @@
         <br />
         <form id="evaluationForm">
         <div class="col-md-12">
-          {{##def.description:
-          <div class="description">
-            1 = did not perform in this manner at all
-            <br>2 = low performance in this area
-            <br>3 = did okay in this area, but could have contributed more to the group
-            <br>4 = contributed enough to be considered an active part of the group
-            <br>5 = performed great as an integral, vital part of the group in this area
-          </div>
-          #}} {{~it :member:index}}
+          {{~it :member:index}}
           <div>
             <h2>{{=member.name}}</h2>
             <ol>
               <li>
-                <select required style="float: right" id="stu{{=member.StudentId}}-q0">
-                  <option value=""{{? member.scores[0] === '0'}} selected{{?}}>---</option>
-                  <option value="1"{{? member.scores[0] === '1'}} selected{{?}}>1</option>
-                  <option value="2"{{? member.scores[0] === '2'}} selected{{?}}>2</option>
-                  <option value="3"{{? member.scores[0] === '3'}} selected{{?}}>3</option>
-                  <option value="4"{{? member.scores[0] === '4'}} selected{{?}}>4</option>
-                  <option value="5"{{? member.scores[0] === '5'}} selected{{?}}>5</option>
-                </select>
                 <h3>Cooperation</h3>
-                {{#def.description}}
+                <select class="form-control" required id="stu{{=member.StudentId}}-q0">
+                  <option value=""{{? member.scores[0] === "0"}} selected{{?}}>---</option>
+                  <option value="1"{{? member.scores[0] === "1"}} selected{{?}}>
+                    1 = did not perform in this manner at all
+                  </option>
+                  <option value="2"{{? member.scores[0] === "2"}} selected{{?}}>
+                    2 = low performance in this area
+                  </option>
+                  <option value="3"{{? member.scores[0] === "3"}} selected{{?}}>
+                    3 = did okay in this area, but could have contributed more to the group
+                  </option>
+                  <option value="4"{{? member.scores[0] === "4"}} selected{{?}}>
+                    4 = contributed enough to be considered an active part of the group
+                  </option>
+                  <option value="5"{{? member.scores[0] === "5"}} selected{{?}}>
+                    5 = performed great as an integral, vital part of the group in this area
+                  </option>
+                </select>
               </li>
               <li>
-                <select required style="float: right" id="stu{{=member.StudentId}}-q1">
-                  <option value=""{{? member.scores[1] === '0'}} selected{{?}}>---</option>
-                  <option value="1"{{? member.scores[1] === '1'}} selected{{?}}>1</option>
-                  <option value="2"{{? member.scores[1] === '2'}} selected{{?}}>2</option>
-                  <option value="3"{{? member.scores[1] === '3'}} selected{{?}}>3</option>
-                  <option value="4"{{? member.scores[1] === '4'}} selected{{?}}>4</option>
-                  <option value="5"{{? member.scores[1] === '5'}} selected{{?}}>5</option>
-                </select>
                 <h3>Participation</h3>
-                {{#def.description}}
+                <select class="form-control" required id="stu{{=member.StudentId}}-q1">
+                  <option value=""{{? member.scores[1] === "0"}} selected{{?}}>---</option>
+                  <option value="1"{{? member.scores[1] === "1"}} selected{{?}}>
+                    1 = did not perform in this manner at all
+                  </option>
+                  <option value="2"{{? member.scores[1] === "2"}} selected{{?}}>
+                    2 = low performance in this area
+                  </option>
+                  <option value="3"{{? member.scores[1] === "3"}} selected{{?}}>
+                    3 = did okay in this area, but could have contributed more to the group
+                  </option>
+                  <option value="4"{{? member.scores[1] === "4"}} selected{{?}}>
+                    4 = contributed enough to be considered an active part of the group
+                  </option>
+                  <option value="5"{{? member.scores[1] === "5"}} selected{{?}}>
+                    5 = performed great as an integral, vital part of the group in this area
+                  </option>
+                </select>
               </li>
               <li>
-                <select required style="float: right" id="stu{{=member.StudentId}}-q2">
-                  <option value=""{{? member.scores[2] === '0'}} selected{{?}}>---</option>
-                  <option value="1"{{? member.scores[2] === '1'}} selected{{?}}>1</option>
-                  <option value="2"{{? member.scores[2] === '2'}} selected{{?}}>2</option>
-                  <option value="3"{{? member.scores[2] === '3'}} selected{{?}}>3</option>
-                  <option value="4"{{? member.scores[2] === '4'}} selected{{?}}>4</option>
-                  <option value="5"{{? member.scores[2] === '5'}} selected{{?}}>5</option>
-                </select>
                 <h3>Quality of work</h3>
-                {{#def.description}}
+                <select class="form-control" required id="stu{{=member.StudentId}}-q2">
+                  <option value=""{{? member.scores[2] === "0"}} selected{{?}}>---</option>
+                  <option value="1"{{? member.scores[2] === "1"}} selected{{?}}>
+                    1 = did not perform in this manner at all
+                  </option>
+                  <option value="2"{{? member.scores[2] === "2"}} selected{{?}}>
+                    2 = low performance in this area
+                  </option>
+                  <option value="3"{{? member.scores[2] === "3"}} selected{{?}}>
+                    3 = did okay in this area, but could have contributed more to the group
+                  </option>
+                  <option value="4"{{? member.scores[2] === "4"}} selected{{?}}>
+                    4 = contributed enough to be considered an active part of the group
+                  </option>
+                  <option value="5"{{? member.scores[2] === "5"}} selected{{?}}>
+                    5 = performed great as an integral, vital part of the group in this area
+                  </option>
+                </select>
               </li>
               <li>
-                <select required style="float: right" id="stu{{=member.StudentId}}-q3">
-                  <option value=""{{? member.scores[3] === '0'}} selected{{?}}>---</option>
-                  <option value="1"{{? member.scores[3] === '1'}} selected{{?}}>1</option>
-                  <option value="2"{{? member.scores[3] === '2'}} selected{{?}}>2</option>
-                  <option value="3"{{? member.scores[3] === '3'}} selected{{?}}>3</option>
-                  <option value="4"{{? member.scores[3] === '4'}} selected{{?}}>4</option>
-                  <option value="5"{{? member.scores[3] === '5'}} selected{{?}}>5</option>
-                </select>
                 <h3>Contribution of the overall group</h3>
-                {{#def.description}}
+                <select class="form-control" required id="stu{{=member.StudentId}}-q3">
+                  <option value=""{{? member.scores[3] === "0"}} selected{{?}}>---</option>
+                  <option value="1"{{? member.scores[3] === "1"}} selected{{?}}>
+                    1 = did not perform in this manner at all
+                  </option>
+                  <option value="2"{{? member.scores[3] === "2"}} selected{{?}}>
+                    2 = low performance in this area
+                  </option>
+                  <option value="3"{{? member.scores[3] === "3"}} selected{{?}}>
+                    3 = did okay in this area, but could have contributed more to the group
+                  </option>
+                  <option value="4"{{? member.scores[3] === "4"}} selected{{?}}>
+                    4 = contributed enough to be considered an active part of the group
+                  </option>
+                  <option value="5"{{? member.scores[3] === "5"}} selected{{?}}>
+                    5 = performed great as an integral, vital part of the group in this area
+                  </option>
+                </select>
               </li>
             </ol>
           </div>
           {{~}}
         </div>
         <center>
-          <input type="submit" class="btn-primary btn-lg btn" value="Submit">
+          <input type="submit" class="btn-primary btn-lg btn" id="evaluationForm-submit">
         </center>
         </form>
       </div>
+      </script>
+      <script id="updateSuccessView" type="text/x-dot-template">
+        <div class="starter-template">
+          您的提交已送出，請記得登出系統。<br />謝謝您的使用。
+        </div>
       </script>
       <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
       <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
