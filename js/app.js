@@ -3,7 +3,7 @@
   Parse.initialize("s4747jSandiQGpXlbizjGZMgXJAepvnGnbc7NCmu",
     "PihDCqy36lpBPQc8rmiEH477nSD0tT1vrSSjBAm0");
   var templates = {};
-  ["loginView", "evaluationView"].forEach(function (e) {
+  ["loginView", "evaluationView", "updateSuccessView"].forEach(function (e) {
     templateCode = document.getElementById(e).text;
     templates[e] = doT.template(templateCode);
   });
@@ -63,6 +63,7 @@
             var TeamMembers = evaluation.toJSON().evaluations;
           }
           document.getElementById('content').innerHTML = templates.evaluationView(TeamMembers);
+          document.getElementById('evaluationForm-submit').value = ( evaluation === undefined ) ? '送出表單' :'修改表單';
           document.getElementById('evaluationForm').addEventListener('submit', function(){
             for(var i = 0; i < TeamMembers.length; i++){
               for(var j = 0; j < TeamMembers[i].scores.length; j++){
@@ -80,8 +81,7 @@
             evaluation.set('evaluations', TeamMembers);
             evaluation.save(null, {
               success: function(){
-                alert("Result saved in database.");
-                handlers.evaluationView();
+                document.getElementById('content').innerHTML = templates.updateSuccessView();
               },
               error: function(){},
             });
