@@ -51,7 +51,6 @@
       query.equalTo('user', currentUser);
       query.first({
         success: function(evaluation){
-          window.EVAL = evaluation;
           if(evaluation === undefined){
             var TeamMembers = TAHelp.getMemberlistOf(currentUser.get('username')).filter(function(e){
               return (e.StudentId !== currentUser.get('username') ) ? true : false;
